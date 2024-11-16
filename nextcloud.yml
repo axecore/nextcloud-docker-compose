@@ -54,13 +54,13 @@ services:
     networks: 
       - cloud
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=0
       - TZ=Asia/Makassar
       - password=password
       - username=nextcloud
-      - domain=cloud\\.aldilinux\\.my\\.id # Escape dots in the domain
-      - extra_params=--o:ssl.enable=true --o:ssl.termination=true
+      - domain=office-cloud\\.aldilinux\\.my\\.id # Escape dots in the domain
+      - extra_params=--o:ssl.enable=true --o:ssl.termination=true --o:server_name=office-cloud.aldilinux.my.id
     ports:
       - 9980:9980
 
